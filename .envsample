@@ -1,0 +1,4 @@
+MONGODB_URI="Your mongodb url"
+RESEND_API_KEY = 'ur api key'
+NEXTAUTH_SECRET= your secret
+OPENAI_API_KEY= 'ur api key'
