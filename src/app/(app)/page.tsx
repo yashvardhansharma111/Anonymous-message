@@ -21,7 +21,7 @@ export default function Home() {
             Dive into the World of Anonymous Messages
           </h1>
           <p className="mt-3 md:mt-4 text-base md:text-lg">
-          Anonymous Messages - Where your identity remains a secret.
+            Anonymous Messages - Where your identity remains a secret.
           </p>
         </section>
 
@@ -55,7 +55,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center p-4 md:p-6 bg-gray-900 text-white">
-        ©&apos2024&aposAnonymous&aposfeedback&apos'yashvardhan&apossharma&apos.&aposAll&aposrights&aposreserved.
+        ©&amp;2024&apos;Anonymous&apos;feedback&apos;yashvardhan&apos;sharma&apos;.&amp;All&apos;rights&apos;reserved.
       </footer>
     </>
   );
