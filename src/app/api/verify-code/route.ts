@@ -10,17 +10,12 @@ export async function POST(request: NextRequest) {
     // Parse the JSON body of the request
     const { username, code } = await request.json();
 
-    console.log("Received username:", username);
-    console.log("Received code:", code);
-
     // Decode the username
     const decodedUsername = decodeURIComponent(username);
-    console.log('Decoded Username:', decodedUsername);
 
     // Find the user by decoded username
     const user = await UserModel.findOne({ username: decodedUsername });
-    console.log('Database user:', user);
-
+    
     // If user is not found, return a 404 response
     if (!user) {
       return NextResponse.json(

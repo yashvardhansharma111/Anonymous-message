@@ -43,14 +43,13 @@ export default function SignUpForm() {
   });
 
   useEffect(() => {
-    const username = form.watch('username'); // extra
     const checkUsernameUnique = async () => {
-      if (username) {
+      if (debounce) {
         setIsCheckingUsername(true);
         setUsernameMessage(''); // Reset message
         try {
           const response = await axios.get<ApiResponse>(
-            `/api/check-username-unique?username=${username}`
+            `/api/check-username-unique?username=${debounce}`
           );
           setUsernameMessage(response.data.message);
         } catch (error) {
@@ -64,7 +63,7 @@ export default function SignUpForm() {
       }
     };
     checkUsernameUnique();
-  }, [form.watch("username")]);
+  },[debounce]);
 
   const onSubmit = async (data: z.infer<typeof signUpSchema>) => {
     setIsSubmitting(true);

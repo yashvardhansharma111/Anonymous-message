@@ -33,8 +33,6 @@ export default function VerifyAccount() {
         code: data.code,
       });
 
-      console.log('API Response:', response.data);
-
       toast({
         title: 'Success',
         description: response.data.message,
